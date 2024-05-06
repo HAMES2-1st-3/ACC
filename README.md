@@ -3,14 +3,10 @@
 1. [📖 프로젝트 소개](#프로젝트-소개)
 2. [👥 팀원 구성 및 역할 분담](#팀원-구성-및-역할-분담)
 3. [🔧 개발 환경 및 사용 Tool](#개발-환경-및-사용-tool)
-4. [📋 시스템 요구사항 명세서](#시스템-요구사항-명세서)
-5. [🏛 SW 아키텍쳐](#sw-아키텍쳐)
-6. [🏗 HW 아키텍쳐](#hw-아키텍쳐)
-7. [👨‍💻 역할 분담](#역할-분담)
-8. [⏳ 개발 기간 및 작업 관리](#개발-기간-및-작업-관리)
-9. [🎬 시연 영상](#시연-영상)
-10. [🛠 트러블 슈팅](#트러블-슈팅)
-12. [🔚 후기](#후기)
+4. . [🏛 SW 아키텍쳐](#sw-아키텍쳐)
+5. [🏗 HW 아키텍쳐](#hw-아키텍쳐)
+6. [🎬 시연 영상](#시연-영상)
+7.  [🛠 트러블 슈팅](#트러블-슈팅)
 
 
 
@@ -29,15 +25,13 @@
   * SILS 이후, 순차적 하드웨어 부품 적용하여 실행 및 검증 수행(HILS)
 * **PID 제어**
   * PI Gain 튜닝을 통해 시스템 성능 분석을 수행하고 최적의 제어 Gain값을 도출
-<br/>
-<br/>
 
 ## 프로젝트 요구사항 
 
 RQ-01 ~ RQ-10 은 기본 요구사항이며, RQ-11 ~ RQ-18은 추가 요구사항이다.
 
 |Req ID |	summary | 
-|:----:|:----------|
+|:-----|:----------|
 |RQ-01	|ACC 모드는 3단계로 구성된다(ACC off, ACC standby, ACC on) |
 |RQ-02	|"SW1을 누르면 다름 순서로 모드가 변경된다. (ACC off-> ACC standby -> ACC on -> ACC off) " |
 |RQ-03	|ACC off 는 적색 LED가 1초 주기로 ACC standby는 적색 LED가 0.2초 주기로 깜빡이며 ACC On은 적색 LED가 항상 켜져 있다. |
@@ -56,6 +50,7 @@ RQ-01 ~ RQ-10 은 기본 요구사항이며, RQ-11 ~ RQ-18은 추가 요구사�
 |RQ-16	|차량의 주행 방향에 해당하는 초음파 센서의 값을 읽어온다. |
 |RQ-17	|좌회전 혹은 우회전을 할 때, 차량 혹은 장애물이 감지되면 왼쪽 혹은 오른쪽 방향의 초음파 센서로 측정한 장애물 거리가 50cm 이내면 0.5초 주기 부저 알림, 10cm 이내면 연속적인 부저 알림을 수행한다.(주파수는 상관없음) |
 |RQ-18	|좌회전일 경우 빨간색 LED를 0.5초 주기로 점등, 우회전일 경우 파란색 LED를 0.5초 주기로 점등, 직진일 경우 초록색 LED를 항상 켜놓는다. (LED는 RGB LED를 사용한다) |
+
 ## 프로젝트 기능
 * **Adaptive Cruise Control**
   * ACC 기능이 on 상태이면, 가변저항을 통해 속도 조절이 가능하다.
@@ -74,8 +69,6 @@ RQ-01 ~ RQ-10 은 기본 요구사항이며, RQ-11 ~ RQ-18은 추가 요구사�
   * 조향모드에 따라 초음파 센서 3개 중 1개를 선택하고 거리값을 읽어온다.
   * 조향모드에 따라 RGB LED를 점등한다. 
   * 좌회전 및 우회전일 때 50cm 이하 거리에 장애물이 감지되면 사용자에게 부저를 통해 알린다.
-<br />
-<br />
 
 # 팀원 구성 및 역할 분담
 <table>
@@ -101,8 +94,6 @@ RQ-01 ~ RQ-10 은 기본 요구사항이며, RQ-11 ~ RQ-18은 추가 요구사�
     <td align="left">- 하드웨어 아키텍처 설계 <br>- 판단 레이어 모듈 개발 <br>- 제어 레이어 모듈 개발<br>- 단위/통합 테스트</td>
   </tr>
 </table>
-<br />
-<br />
 
 # 개발 환경 및 사용 Tool
 <table>
@@ -123,28 +114,14 @@ RQ-01 ~ RQ-10 은 기본 요구사항이며, RQ-11 ~ RQ-18은 추가 요구사�
     <td align="center"><img src="image/matlab_simulink.png" width="130px;" alt=""></a></td>
   </tr>
 </table>
-<br />
-<br />
-
-# SW 아키텍쳐
-<img src="image/Software_Architecture.png" width="1400px;">
-<br/>
-<br/>
 
 # HW 아키텍쳐
 <img src="image/Hardware_Architecture.png" width="1400px;">
-<br/>
-<br/>
 
-
-# 개발 기간 및 작업 관리
-
-<img src="image/Schedule.png" width="600px;">
-<br />
-<br />
+# SW 아키텍쳐
+<img src="image/Software_Architecture.png" width="1400px;">
 
 # 시연 영상
-<iframe width="560" height="315" src="https://www.youtube.com/embed/tgkkNhNFv3k?si=vSjBmFmooWAPO2pZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 # 트러블 슈팅
 ## 모듈 통합 시, 프로그램이 비이상적으로 종료되는 문제
